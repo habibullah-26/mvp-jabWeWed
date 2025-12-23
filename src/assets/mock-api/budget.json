@@ -1,0 +1,5 @@
+[
+  { "id": 1, "category": "Venue", "estimated": 600000, "actual": 550000 },
+  { "id": 2, "category": "Catering", "estimated": 400000, "actual": 420000 },
+  { "id": 3, "category": "Photography", "estimated": 150000, "actual": 140000 }
+]

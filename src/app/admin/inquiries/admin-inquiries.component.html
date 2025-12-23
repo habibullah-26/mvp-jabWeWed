@@ -1,0 +1,22 @@
+<h2>Admin - Inquiries</h2>
+<!-- Add inquiries list or content here -->
+  <h2>Admin - Inquiries</h2>
+
+    <table border="1" cellpadding="6">
+      <thead>
+        <tr>
+          <th>Vendor ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Message</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let i of inquiries">
+          <td>{{ i.vendorId }}</td>
+          <td>{{ i.name }}</td>
+          <td>{{ i.email }}</td>
+          <td>{{ i.message }}</td>
+        </tr>
+      </tbody>
+    </table>

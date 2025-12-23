@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Royal Banquet Hall",
+    "category": "Venue",
+    "city": "Lahore",
+    "priceRange": "500k - 800k",
+    "description": "Luxury wedding venue with full services."
+  },
+  {
+    "id": 2,
+    "name": "Moments Studio",
+    "category": "Photography",
+    "city": "Lahore",
+    "priceRange": "120k - 200k",
+    "description": "Professional wedding photography."
+  },
+  {
+    "id": 3,
+    "name": "Elite Caterers",
+    "category": "Catering",
+    "city": "Islamabad",
+    "priceRange": "300k - 600k",
+    "description": "Premium catering for weddings."
+  }
+]

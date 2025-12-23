@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "vendorId": 1,
+    "name": "Ali Khan",
+    "email": "ali@test.com",
+    "message": "Interested in booking your venue for March wedding."
+  },
+  {
+    "id": 2,
+    "vendorId": 2,
+    "name": "Sara Ahmed",
+    "email": "sara@test.com",
+    "message": "Need photographer for June wedding."
+  }
+]

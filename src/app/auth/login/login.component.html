@@ -1,0 +1,62 @@
+<div class="auth-container">
+    <div class="login-card">
+
+        <!-- Logo -->
+        <div class="logo">
+            <div class="logo-circle">LOGO</div>
+            <h1>Enterprise Portal</h1>
+            <p>Sign in to continue</p>
+        </div>
+
+        <form [formGroup]="loginForm" (ngSubmit)="submit()">
+
+            <!-- Email -->
+            <div class="input-group" [class.error]="loginForm.get('email')?.touched && loginForm.get('email')?.invalid">
+                <span class="icon">✉</span>
+                <input type="email" placeholder="Email address" formControlName="email" />
+            </div>
+            <small class="error-text" *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid">
+                Please enter a valid email
+            </small>
+
+            <!-- Password -->
+            <div class="input-group"
+                [class.error]="loginForm.get('password')?.touched && loginForm.get('password')?.invalid">
+                <span class="icon">🔒</span>
+                <input type="password" placeholder="Password" formControlName="password" />
+            </div>
+            <small class="error-text" *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid">
+                Password is required
+            </small>
+
+            <!-- Options -->
+            <div class="options">
+                <label class="remember">
+                    <input type="checkbox" formControlName="rememberMe" />
+                    Remember me
+                </label>
+
+                <a class="forgot" href="#">Forgot password?</a>
+            </div>
+
+            <!-- Button -->
+            <button type="submit" class="login-btn" [disabled]="loginForm.invalid">
+                Sign In
+            </button>
+
+            <!-- Sign Up -->
+            <div class="signup-link m-top-10">
+                <span>Don't have an account?</span>
+                <a href="#" (click)="goToRegister($event)">Sign Up</a>
+            </div>
+
+        </form>
+
+        <!-- Footer -->
+        <div class="footer m-top-10">
+            <span>Need access?</span>
+            <a href="#">Contact Administrator</a>
+        </div>
+
+    </div>
+</div>

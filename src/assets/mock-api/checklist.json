@@ -1,0 +1,6 @@
+[
+  { "id": 1, "title": "Book wedding venue", "completed": true },
+  { "id": 2, "title": "Hire photographer", "completed": false },
+  { "id": 3, "title": "Select catering service", "completed": false },
+  { "id": 4, "title": "Send invitations", "completed": false }
+]

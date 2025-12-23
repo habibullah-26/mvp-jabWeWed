@@ -1,0 +1,87 @@
+<div class="auth-container">
+  <div class="register-card">
+
+    <!-- Logo -->
+    <div class="logo">
+      <div class="logo-circle">LOGO</div>
+      <h1>Create Account</h1>
+      <p>Start planning your wedding today</p>
+    </div>
+
+    <form [formGroup]="registerForm" (ngSubmit)="submit()">
+
+      <!-- Full Name -->
+      <div class="input-group"
+           [class.error]="registerForm.get('fullName')?.touched && registerForm.get('fullName')?.invalid">
+        <span class="icon">👤</span>
+        <input
+          type="text"
+          placeholder="Full name"
+          formControlName="fullName"
+        />
+      </div>
+      <small class="error-text"
+        *ngIf="registerForm.get('fullName')?.touched && registerForm.get('fullName')?.invalid">
+        Full name is required
+      </small>
+
+      <!-- Email -->
+      <div class="input-group"
+           [class.error]="registerForm.get('email')?.touched && registerForm.get('email')?.invalid">
+        <span class="icon">✉</span>
+        <input
+          type="email"
+          placeholder="Email address"
+          formControlName="email"
+        />
+      </div>
+      <small class="error-text"
+        *ngIf="registerForm.get('email')?.touched && registerForm.get('email')?.invalid">
+        Please enter a valid email
+      </small>
+
+      <!-- Password -->
+      <div class="input-group"
+           [class.error]="registerForm.get('password')?.touched && registerForm.get('password')?.invalid">
+        <span class="icon">🔒</span>
+        <input
+          type="password"
+          placeholder="Password"
+          formControlName="password"
+        />
+      </div>
+      <small class="error-text"
+        *ngIf="registerForm.get('password')?.touched && registerForm.get('password')?.invalid">
+        Password must be at least 6 characters
+      </small>
+
+      <!-- Confirm Password -->
+      <div class="input-group"
+           [class.error]="registerForm.get('confirmPassword')?.touched && registerForm.get('confirmPassword')?.invalid">
+        <span class="icon">🔒</span>
+        <input
+          type="password"
+          placeholder="Confirm password"
+          formControlName="confirmPassword"
+        />
+      </div>
+      <small class="error-text"
+        *ngIf="registerForm.get('confirmPassword')?.touched && registerForm.get('confirmPassword')?.invalid">
+        Please confirm your password
+      </small>
+
+      <!-- Button -->
+      <button type="submit" class="register-btn">
+        Create Account
+      </button>
+
+    </form>
+
+    <!-- Footer -->
+    <div class="footer">
+      <span>Already have an account?</span>
+      <a routerLink="/login">Sign in</a>
+    </div>
+
+  </div>
+</div>
