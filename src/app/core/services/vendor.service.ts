@@ -16,4 +16,5 @@ export class VendorService {
     return this.api.get<Vendor[]>('vendors.json')
       .pipe(map(list => list.find(v => v.id === id)));
   }
+  
 }

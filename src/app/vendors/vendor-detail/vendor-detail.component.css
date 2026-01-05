@@ -1,0 +1,36 @@
+.detail-wrapper{max-width:1200px;margin:auto;padding:20px}
+.hero-gallery{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.hero-gallery img{height:160px;object-fit:cover;border-radius:12px;width:100%}
+
+.header h1{margin:15px 0 5px}
+.meta span{margin-right:15px;color:#777}
+
+.section{margin-top:40px}
+.section h2{color:#c2185b}
+
+.badges span{
+  background:#fde6ef;color:#c2185b;padding:6px 12px;
+  border-radius:20px;margin-right:10px;font-size:13px
+}
+
+.packages{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+.pkg{
+  background:#fff;padding:15px;border-radius:16px;
+  box-shadow:0 4px 15px rgba(0,0,0,.1)
+}
+
+.deals .deal{
+  background:#fff0f6;border:1px dashed #c2185b;
+  padding:15px;border-radius:12px;margin-bottom:15px
+}
+
+.review{
+  background:#fff;padding:15px;border-radius:12px;
+  margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,.1)
+}
+
+.cta{text-align:center;margin:40px 0}
+.cta button{
+  background:#c2185b;color:#fff;border:none;
+  padding:15px 50px;border-radius:30px;font-size:18px
+}

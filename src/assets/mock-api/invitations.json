@@ -1,0 +1,138 @@
+[
+  {
+    "id": 1,
+    "title": "Floral Wedding Invitation",
+    "style": "Floral",
+    "price": 1.99,
+    "currency": "USD",
+    "category": "Wedding Invitations",
+    "collection": "New Collection",
+    "thumbnail": "https://images.unsplash.com/photo-1517841905240-472988babdf9",
+    "images": [
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+      "https://images.unsplash.com/photo-1464983953574-0892a716854b"
+    ],
+    "rating": 4.8,
+    "reviews": 112,
+    "description": "Beautiful floral themed wedding invitation with soft pastel colors and elegant typography."
+  },
+  {
+    "id": 2,
+    "title": "Rustic Kraft Invitation",
+    "style": "Rustic",
+    "price": 1.99,
+    "currency": "USD",
+    "category": "Wedding Invitations",
+    "collection": "New Collection",
+    "thumbnail": "https://images.unsplash.com/photo-1519681393784-d120267933ba",
+    "images": [
+      "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368",
+      "https://images.unsplash.com/photo-1519125323398-675f0ddb6308"
+    ],
+    "rating": 4.7,
+    "reviews": 98,
+    "description": "Handcrafted rustic wedding invitation printed on premium kraft paper."
+  },
+  {
+    "id": 3,
+    "title": "Simple Minimal Invite",
+    "style": "Simple",
+    "price": 1.99,
+    "currency": "USD",
+    "category": "Wedding Invitations",
+    "collection": "New Collection",
+    "thumbnail": "https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5",
+    "images": [
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f",
+      "https://images.unsplash.com/photo-1512428559087-560fa5ceab42"
+    ],
+    "rating": 4.9,
+    "reviews": 140,
+    "description": "Clean minimal style invitation designed for modern and elegant weddings."
+  },
+  {
+    "id": 4,
+    "title": "Classic Royal Invitation",
+    "style": "Classic",
+    "price": 1.99,
+    "currency": "USD",
+    "category": "Wedding Invitations",
+    "collection": "New Collection",
+    "thumbnail": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f",
+    "images": [
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f",
+      "https://images.unsplash.com/photo-1512428559087-560fa5ceab42"
+    ],
+    "rating": 4.8,
+    "reviews": 121,
+    "description": "Traditional royal style wedding invitation with golden borders."
+  },
+  {
+    "id": 5,
+    "title": "Vintage Lace Invitation",
+    "style": "Vintage",
+    "price": 1.99,
+    "currency": "USD",
+    "category": "Wedding Invitations",
+    "collection": "New Collection",
+    "thumbnail": "https://images.unsplash.com/photo-1519681393784-d120267933ba",
+    "images": [
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f",
+      "https://images.unsplash.com/photo-1512428559087-560fa5ceab42"
+    ],
+    "rating": 4.7,
+    "reviews": 87,
+    "description": "Romantic vintage invitation with lace patterns."
+  },
+  {
+    "id": 6,
+    "title": "Modern Geometric Invite",
+    "style": "Modern",
+    "price": 1.99,
+    "currency": "USD",
+    "category": "Wedding Invitations",
+    "collection": "New Collection",
+    "thumbnail": "https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
+    "images": [
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f",
+      "https://images.unsplash.com/photo-1512428559087-560fa5ceab42"
+    ],
+    "rating": 4.9,
+    "reviews": 165,
+    "description": "Trendy modern invitation with geometric patterns."
+  },
+  {
+    "id": 7,
+    "title": "Bohemian Dream Invite",
+    "style": "Bohemian",
+    "price": 1.99,
+    "currency": "USD",
+    "category": "Wedding Invitations",
+    "collection": "New Collection",
+    "thumbnail": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f",
+    "images": [
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f",
+      "https://images.unsplash.com/photo-1512428559087-560fa5ceab42"
+    ],
+    "rating": 4.8,
+    "reviews": 132,
+    "description": "Soft boho themed invitation with watercolor and earthy tones."
+  },
+  {
+    "id": 8,
+    "title": "Beach Destination Invite",
+    "style": "Beach",
+    "price": 1.99,
+    "currency": "USD",
+    "category": "Wedding Invitations",
+    "collection": "New Collection",
+    "thumbnail": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f",
+    "images": [
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f",
+      "https://images.unsplash.com/photo-1512428559087-560fa5ceab42"
+    ],
+    "rating": 4.7,
+    "reviews": 104,
+    "description": "Ocean inspired destination wedding invitation with tropical elements."
+  }
+]

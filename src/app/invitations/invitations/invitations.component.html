@@ -1,0 +1,41 @@
+<!-- Invitations Component Content -->
+<div class="invitation-content">
+    <!-- Content goes here -->
+</div>
+
+<!-- Filters Section -->
+<div class="filters">
+    <div class="filters-inner">
+        <div class="filter-group">
+            <label for="styleFilter">Style</label>
+            <select id="styleFilter">
+                <option value="">All</option>
+                <option *ngFor="let style of styles" [value]="style">{{ style }}</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <label for="typeFilter">Type</label>
+            <select id="typeFilter">
+                <option value="">All</option>
+                <option *ngFor="let type of types" [value]="type">{{ type }}</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <label for="priceFilter">Max Price</label>
+            <input id="priceFilter" type="number" placeholder="Enter max price" />
+        </div>
+        <button class="filter-btn" type="button">Filter</button>
+    </div>
+</div>
+
+<!-- Invitations List -->
+<div class="invitation-list">
+    <div class="invitation-card" *ngFor="let invitation of allInvitations">
+        <img [src]="invitation.thumbnail" alt="{{invitation.title}}">
+        <div class="invitation-card-content">
+            <h3>{{ invitation.title }}</h3>
+            <p>{{ invitation.description }}</p>
+            <div class="invitation-price">${{ invitation.price }}</div>
+        </div>
+    </div>
+</div>

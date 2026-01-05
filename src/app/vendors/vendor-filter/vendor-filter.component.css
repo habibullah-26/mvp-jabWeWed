@@ -1,0 +1,23 @@
+.filter-bar {
+  display: flex;
+  gap: 12px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,.1);
+}
+
+.filter-bar input, select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  flex: 1;
+}
+
+.filter-bar button {
+  background: #c2185b;
+  color: white;
+  border: none;
+  padding: 0 25px;
+  border-radius: 8px;
+}

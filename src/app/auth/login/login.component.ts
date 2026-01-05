@@ -38,8 +38,6 @@ export class LoginComponent implements OnInit {
       this.loginForm.markAllAsTouched();
       return;
     }
-    debugger;
-
     this.loading = true;
     this.errorMessage = '';
 
@@ -47,11 +45,10 @@ export class LoginComponent implements OnInit {
     setTimeout(() => {
       const { email, password } = this.loginForm.value;
 
-      debugger;
-      if (email === 'user@test.com' && password === '123456') {
+      if ((email === 'user@test.com' && password === '123456') ||
+          (email === 'admin@test.com' && password === 'admin123')) {
         localStorage.setItem('loggedIn', 'true');
         this.router.navigate(['/app/dashboard']);
-        debugger;
       } else {
         this.errorMessage = 'Invalid email or password';
       }

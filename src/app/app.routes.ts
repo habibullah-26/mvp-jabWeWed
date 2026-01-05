@@ -14,8 +14,18 @@ import { WeddingProfileComponent } from './wedding/profile/wedding-profile.compo
 export const routes: Routes = [
 
   /* ================= PUBLIC ================= */
-  { path: '', component: LandingComponent },
-
+  {
+    path: '',
+    component: LandingComponent,
+    children: [
+      { path: '', loadComponent: () => import('./landing/home/home.component').then(m => m.HomeComponent) },
+      { path: 'vendors', loadComponent: () => import('./vendors/vendor-list/vendor-list.component').then(m => m.VendorListComponent) },
+      { path: 'vendors/:id', loadComponent: () => import('./vendors/vendor-detail/vendor-detail.component').then(m => m.VendorDetailComponent) },
+      { path: 'invitations', loadComponent: () => import('./invitations/invitations/invitations.component').then(m => m.InvitationsComponent) },
+      { path: 'registry', loadComponent: () => import('./registry/registry/registry.component').then(m => m.RegistryComponent) },
+      // { path: 'contact', loadComponent: () => import('./public/contact/contact.component').then(m => m.ContactComponent) }
+    ]
+  },
   { 
     path: 'login',
     loadComponent: () =>

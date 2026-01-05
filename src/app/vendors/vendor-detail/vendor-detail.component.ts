@@ -1,38 +1,33 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-import { VendorService } from '../../core/services/vendor.service';
 import { Vendor } from '../../core/models/vendor.model';
+import { CommonModule } from '@angular/common';
+import { VendorService } from '../../core/services/vendor.service';
 
 @Component({
-  standalone: true,
   selector: 'app-vendor-detail',
+  standalone: true,
   imports: [CommonModule],
-  template: `
-    <h2>Vendor Details</h2>
-
-    <div *ngIf="vendor">
-      <p><strong>Name:</strong> {{ vendor.name }}</p>
-      <p><strong>Category:</strong> {{ vendor.category }}</p>
-      <p><strong>City:</strong> {{ vendor.city }}</p>
-      <p><strong>Price:</strong> {{ vendor.priceRange }}</p>
-      <p>{{ vendor.description }}</p>
-    </div>
-  `
+  templateUrl: './vendor-detail.component.html',
+  styleUrls: ['./vendor-detail.component.css']
 })
 export class VendorDetailComponent implements OnInit {
 
-  vendor: Vendor | undefined;
+  vendor!: Vendor | undefined;
+  vendorId!: number;
 
-  constructor(
-    private route: ActivatedRoute,
-    private vendorService: VendorService
-  ) {}
+  constructor(private route: ActivatedRoute,private vendorService: VendorService) {}
 
-  ngOnInit(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.vendorService.getVendors().subscribe(list => {
-      this.vendor = list.find(v => v.id === id);
+  ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      const id = params.get('id');
+      if (id) {
+      this.vendorId = +id;
+      this.vendorService.getVendorById(this.vendorId).subscribe((vendorData) => {
+        this.vendor = vendorData;
+      });
+      }
     });
+
   }
 }

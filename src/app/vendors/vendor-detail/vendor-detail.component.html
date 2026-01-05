@@ -1,0 +1,78 @@
+<div class="detail-wrapper" *ngIf="vendor">
+
+  <!-- HERO IMAGES -->
+  <div class="hero-gallery">
+    <img *ngFor="let img of vendor.images | slice:0:5" [src]="img">
+  </div>
+
+  <!-- HEADER INFO -->
+  <div class="header">
+    <h1>{{vendor.name}}</h1>
+    <div class="meta">
+      <span>📍 {{vendor.city}}</span>
+      <span>🏷 {{vendor.category}}</span>
+      <span>⭐ {{vendor.rating}} ({{vendor.totalReviews}} reviews)</span>
+    </div>
+  </div>
+
+  <!-- DESCRIPTION -->
+  <section class="section">
+    <h2>About Venue</h2>
+    <p>{{vendor.description}}</p>
+  </section>
+
+  <!-- AWARDS -->
+  <section class="section" *ngIf="vendor.awards.length">
+    <h2>Awards</h2>
+    <div class="badges">
+      <span *ngFor="let a of vendor.awards">🏆 {{a.title}} ({{a.year}})</span>
+    </div>
+  </section>
+
+  <!-- PACKAGES -->
+  <section class="section">
+    <h2>Packages</h2>
+    <div class="packages">
+      <div class="pkg" *ngFor="let p of vendor.packages">
+        <h4>{{p.packageName}}</h4>
+        <strong>{{p.price}}</strong>
+        <ul>
+          <li *ngFor="let i of p.includes">{{i}}</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEALS -->
+  <section class="section" *ngIf="vendor.deals.length">
+    <h2>Deals & Offers</h2>
+    <div class="deals">
+      <div class="deal" *ngFor="let d of vendor.deals">
+        <h4>{{d.dealTitle}}</h4>
+        <span>{{d.discount}}</span>
+        <p>{{d.description}}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section">
+    <h2>Reviews</h2>
+    <div class="reviews">
+      <div class="review">
+        <strong>Ali Khan</strong> ⭐⭐⭐⭐⭐
+        <p>Outstanding décor and management. Highly recommended!</p>
+      </div>
+      <div class="review">
+        <strong>Sarah Ahmed</strong> ⭐⭐⭐⭐☆
+        <p>Very cooperative staff and beautiful setup.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTION -->
+  <div class="cta">
+    <button>Request Quote</button>
+  </div>
+
+</div>

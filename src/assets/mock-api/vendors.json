@@ -5,22 +5,229 @@
     "category": "Venue",
     "city": "Lahore",
     "priceRange": "500k - 800k",
-    "description": "Luxury wedding venue with full services."
+    "rating": 4.7,
+    "totalReviews": 386,
+    "description": "A luxury wedding venue offering premium décor, catering, and professional event management services.",
+    "images": [
+      "https://images.unsplash.com/photo-1528605248644-14dd04022da1",
+      "https://images.unsplash.com/photo-1519741497674-611481863552"
+    ],
+    "awards": [
+      { "title": "Best Wedding Venue Lahore", "year": 2023 }
+    ],
+    "packages": [
+      { "packageName": "Silver Package", "price": "500,000 PKR" },
+      { "packageName": "Gold Package", "price": "650,000 PKR" }
+    ],
+    "deals": [
+      { "dealTitle": "Winter Discount", "discount": "10% OFF" }
+    ]
   },
+
   {
     "id": 2,
-    "name": "Moments Studio",
-    "category": "Photography",
-    "city": "Lahore",
-    "priceRange": "120k - 200k",
-    "description": "Professional wedding photography."
+    "name": "Pearl Marquee",
+    "category": "Venue",
+    "city": "Islamabad",
+    "priceRange": "600k - 900k",
+    "rating": 4.8,
+    "totalReviews": 412,
+    "description": "Elegant marquee with modern lighting, spacious seating, and premium catering options.",
+    "images": [
+      "https://images.unsplash.com/photo-1503428593586-e225b39bddfe",
+      "https://images.unsplash.com/photo-1523438885200-e635ba2c371e"
+    ],
+    "awards": [
+      { "title": "Top Marquee Islamabad", "year": 2024 }
+    ],
+    "packages": [
+      { "packageName": "Classic Package", "price": "600,000 PKR" },
+      { "packageName": "Royal Package", "price": "900,000 PKR" }
+    ],
+    "deals": [
+      { "dealTitle": "Free Valet Service", "discount": "Free" }
+    ]
   },
+
   {
     "id": 3,
-    "name": "Elite Caterers",
-    "category": "Catering",
+    "name": "Dream Palace",
+    "category": "Venue",
+    "city": "Karachi",
+    "priceRange": "700k - 1.2M",
+    "rating": 4.6,
+    "totalReviews": 520,
+    "description": "Grand wedding hall known for luxurious interiors and world-class hospitality.",
+    "images": [
+      "https://images.unsplash.com/photo-1532712938310-34cb3982ef74",
+      "https://images.unsplash.com/photo-1528605248644-14dd04022da1"
+    ],
+    "awards": [
+      { "title": "Luxury Venue Award", "year": 2022 }
+    ],
+    "packages": [
+      { "packageName": "Gold Package", "price": "750,000 PKR" },
+      { "packageName": "Platinum Package", "price": "1,200,000 PKR" }
+    ],
+    "deals": [
+      { "dealTitle": "Early Booking Discount", "discount": "12% OFF" }
+    ]
+  },
+
+  {
+    "id": 4,
+    "name": "Emerald Gardens",
+    "category": "Outdoor Venue",
+    "city": "Lahore",
+    "priceRange": "400k - 700k",
+    "rating": 4.5,
+    "totalReviews": 298,
+    "description": "Beautiful outdoor garden venue perfect for day and night weddings.",
+    "images": [
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed",
+      "https://images.unsplash.com/photo-1504198458649-3128b932f49b"
+    ],
+    "awards": [
+      { "title": "Best Outdoor Venue", "year": 2023 }
+    ],
+    "packages": [
+      { "packageName": "Garden Package", "price": "400,000 PKR" }
+    ],
+    "deals": [
+      { "dealTitle": "Spring Deal", "discount": "Free Floral Décor" }
+    ]
+  },
+
+  {
+    "id": 5,
+    "name": "Crystal Ballroom",
+    "category": "Hotel Venue",
+    "city": "Lahore",
+    "priceRange": "900k - 1.5M",
+    "rating": 4.9,
+    "totalReviews": 640,
+    "description": "Five-star hotel ballroom offering unmatched luxury and premium services.",
+    "images": [
+      "https://images.unsplash.com/photo-1519741497674-611481863552",
+      "https://images.unsplash.com/photo-1503428593586-e225b39bddfe"
+    ],
+    "awards": [
+      { "title": "Best Hotel Wedding Venue", "year": 2024 }
+    ],
+    "packages": [
+      { "packageName": "Luxury Package", "price": "1,200,000 PKR" }
+    ],
+    "deals": [
+      { "dealTitle": "Complimentary Honeymoon Suite", "discount": "Free" }
+    ]
+  },
+
+  {
+    "id": 6,
+    "name": "Rosewood Marquee",
+    "category": "Venue",
+    "city": "Faisalabad",
+    "priceRange": "350k - 600k",
+    "rating": 4.4,
+    "totalReviews": 214,
+    "description": "Affordable yet stylish marquee with excellent service quality.",
+    "images": [
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed"
+    ],
+    "awards": [],
+    "packages": [
+      { "packageName": "Basic Package", "price": "350,000 PKR" }
+    ],
+    "deals": [
+      { "dealTitle": "Weekday Discount", "discount": "8% OFF" }
+    ]
+  },
+
+  {
+    "id": 7,
+    "name": "Golden Crown Hall",
+    "category": "Venue",
+    "city": "Multan",
+    "priceRange": "300k - 550k",
+    "rating": 4.3,
+    "totalReviews": 180,
+    "description": "Spacious wedding hall suitable for large family gatherings.",
+    "images": [
+      "https://images.unsplash.com/photo-1523438885200-e635ba2c371e"
+    ],
+    "awards": [],
+    "packages": [
+      { "packageName": "Standard Package", "price": "300,000 PKR" }
+    ],
+    "deals": [
+      { "dealTitle": "Free DJ Service", "discount": "Free" }
+    ]
+  },
+
+  {
+    "id": 8,
+    "name": "Skyline Banquets",
+    "category": "Rooftop Venue",
     "city": "Islamabad",
-    "priceRange": "300k - 600k",
-    "description": "Premium catering for weddings."
+    "priceRange": "650k - 1M",
+    "rating": 4.6,
+    "totalReviews": 342,
+    "description": "Modern rooftop wedding venue with panoramic city views.",
+    "images": [
+      "https://images.unsplash.com/photo-1532712938310-34cb3982ef74"
+    ],
+    "awards": [
+      { "title": "Best Rooftop Venue", "year": 2023 }
+    ],
+    "packages": [
+      { "packageName": "Sky Package", "price": "650,000 PKR" }
+    ],
+    "deals": [
+      { "dealTitle": "Sunset Wedding Offer", "discount": "10% OFF" }
+    ]
+  },
+
+  {
+    "id": 9,
+    "name": "White Pearl Lawn",
+    "category": "Outdoor Venue",
+    "city": "Rawalpindi",
+    "priceRange": "450k - 750k",
+    "rating": 4.5,
+    "totalReviews": 260,
+    "description": "Open-air lawn venue perfect for traditional and themed weddings.",
+    "images": [
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed"
+    ],
+    "awards": [],
+    "packages": [
+      { "packageName": "Classic Lawn Package", "price": "450,000 PKR" }
+    ],
+    "deals": [
+      { "dealTitle": "Decoration Discount", "discount": "Free Lights Setup" }
+    ]
+  },
+
+  {
+    "id": 10,
+    "name": "Imperial Event Complex",
+    "category": "Venue",
+    "city": "Sialkot",
+    "priceRange": "550k - 850k",
+    "rating": 4.6,
+    "totalReviews": 310,
+    "description": "Modern event complex offering premium facilities and décor themes.",
+    "images": [
+      "https://images.unsplash.com/photo-1503428593586-e225b39bddfe"
+    ],
+    "awards": [
+      { "title": "Rising Star Venue", "year": 2024 }
+    ],
+    "packages": [
+      { "packageName": "Premium Package", "price": "550,000 PKR" }
+    ],
+    "deals": [
+      { "dealTitle": "New Year Booking Offer", "discount": "12% OFF" }
+    ]
   }
 ]

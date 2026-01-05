@@ -3,45 +3,40 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { VendorService } from '../../core/services/vendor.service';
 import { Vendor } from '../../core/models/vendor.model';
+import { VendorCardComponent } from '../vendor-card/vendor-card.component';
+import { VendorFilterComponent } from '../vendor-filter/vendor-filter.component';
 
 @Component({
   standalone: true,
   selector: 'app-vendor-list',
-  imports: [CommonModule],
-  template: `
-    <h2>Vendors</h2>
-
-    <label>
-      City:
-      <select (change)="filterCity($event)">
-        <option value="">All</option>
-        <option *ngFor="let c of cities" [value]="c">{{ c }}</option>
-      </select>
-    </label>
-
-    <ul>
-      <li *ngFor="let vendor of filtered">
-        <a (click)="open(vendor.id)">
-          {{ vendor.name }} - {{ vendor.category }} ({{ vendor.city }})
-        </a>
-      </li>
-    </ul>
-  `
+  imports: [CommonModule, VendorCardComponent, VendorFilterComponent],
+  templateUrl: './vendor-list.component.html',
+  styleUrls: ['./vendor-list.component.css']
 })
 export class VendorListComponent implements OnInit {
+
+
+  applyFilter($event: Event) {
+    this.vendorService.getVendors().subscribe(data => {
+      this.vendors = data;
+    });
+  }
 
   vendors: Vendor[] = [];
   filtered: Vendor[] = [];
   cities: string[] = [];
+  filteredVendors: any;
 
   constructor(
     private vendorService: VendorService,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.vendorService.getVendors().subscribe(data => {
       this.vendors = data;
+      console.log(data);
+      this.filteredVendors = data;
       this.filtered = data;
       this.cities = [...new Set(data.map(v => v.city))];
     });

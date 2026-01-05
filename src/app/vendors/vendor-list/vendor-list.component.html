@@ -1,0 +1,11 @@
+<div>
+    <h2 class="vendor-list-header">Find Your Perfect Vendor</h2>
+    <div class="vendor-filter-wrapper">
+        <div class="vendor-filter-box">
+            <app-vendor-filter (filterChanged)="applyFilter($event)"></app-vendor-filter>
+        </div>
+    </div>
+    <div class="vendor-grid">
+        <app-vendor-card *ngFor="let v of filteredVendors" [vendor]="v"></app-vendor-card>
+    </div>
+</div>

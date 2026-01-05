@@ -1,4 +1,19 @@
-<header class="header">
-  <div class="logo">💍 Wedding Planner</div>
-  <div class="user">Welcome, Couple</div>
+<header class="header" role="banner">
+  <div class="logo"><img src="assets/img/jw-logo-new.png" alt="JD"></div>
+  <div class="user" style="position: relative;">
+    <button class="user-btn" style="background: none; border: none; cursor: pointer;" (click)="showDropdown = !showDropdown">
+      Welcome, Couple &#x25BC;
+    </button>
+    <ul class="dropdown-menu" *ngIf="showDropdown" style="position: absolute; right: 0; top: 100%; background: white; list-style: none; margin: 0; padding: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.15); min-width: 140px;">
+      <li>
+        <button class="dropdown-item" (click)="goToProfile()" style="width: 100%; background: none; border: none; padding: 10px; text-align: left;">Profile</button>
+      </li>
+      <li>
+        <button class="dropdown-item" (click)="goToSettings()" style="width: 100%; background: none; border: none; padding: 10px; text-align: left;">Setting</button>
+      </li>
+      <li>
+        <button class="logout-btn" (click)="logout()" style="width: 100%; background: none; border: none; padding: 10px; text-align: left;">Logout</button>
+      </li>
+    </ul>
+  </div>
 </header>

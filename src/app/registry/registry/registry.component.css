@@ -1,0 +1,121 @@
+.registry-filter {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+
+.registry-filter-bar {
+  background: #fff;
+  padding: 18px 24px 10px 24px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  margin-bottom: 28px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.registry-filter-form {
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.registry-filter-form input,
+.registry-filter-form select {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  min-width: 140px;
+  background: #fafafa;
+  font-size: 15px;
+}
+
+.registry-filter-form button {
+  background: #c2185b;
+  color: #fff;
+  border: none;
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+.registry-filter-form button:hover {
+  background: #a31548;
+}
+
+.registry-table-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  padding: 18px 24px;
+
+}
+
+.response-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 16px;
+  background: transparent;
+}
+
+.response-table thead tr {
+  background: linear-gradient(90deg, #f7f7f7 60%, #f1e6ee 100%);
+}
+
+.response-table th {
+  padding: 14px 10px;
+  font-weight: 700;
+  color: black;
+  border-bottom: 2px solid #e0cbe2;
+  text-align: left;
+  letter-spacing: 0.5px;
+  background: none;
+}
+
+.response-table tbody tr {
+  transition: background 0.18s;
+}
+
+.response-table tbody tr:nth-child(even) {
+  background: #faf6fa;
+}
+
+.response-table tbody tr:nth-child(odd) {
+  background: #fff;
+}
+
+.response-table tbody tr:hover {
+  background: #f3e0ef;
+}
+
+.response-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #f0e0f0;
+  color: #333;
+  vertical-align: middle;
+}
+
+.response-table a {
+  color: #c2185b;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.18s;
+}
+.response-table a:hover {
+  color: #a31548;
+}
+
+@media (max-width: 900px) {
+  .response-table th, .response-table td {
+    padding: 8px 4px;
+    font-size: 14px;
+  }
+}
+ 

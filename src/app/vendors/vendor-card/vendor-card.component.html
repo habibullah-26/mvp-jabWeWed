@@ -1,0 +1,15 @@
+<div class="vendor-card">
+  <app-image-slider [images]="vendor.images"></app-image-slider>
+
+  <div class="content" (click)="moveToDetail()">
+    <h3>{{vendor.name}}</h3>
+    <span class="price">{{vendor.priceRange}}</span>
+    <p>{{vendor.description}}</p>
+
+    <div class="awards">
+      <span *ngFor="let a of vendor.awards"> {{a.title}}</span>
+    </div>
+
+    <button class="request-btn">Request Quote</button>
+  </div>
+</div>
