@@ -19,4 +19,5 @@ export class ApiService {
     // Simulated POST
     return this.http.post<T>(`${this.basePath}/${endpoint}`, data);
   }
+
 }

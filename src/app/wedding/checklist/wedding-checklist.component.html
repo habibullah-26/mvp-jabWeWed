@@ -1,0 +1,25 @@
+<div class="checklist-wrapper">
+  <h2 class="checklist-title">Wedding Checklist</h2>
+  <div class="progress-bar">
+    <div class="progress-bar-inner" [style.width.%]="progress"></div>
+    <span class="progress-label">Progress: {{ progress }}%</span>
+  </div>
+  <ul class="checklist-list">
+    <li *ngFor="let item of checklist" class="checklist-item">
+      <label>
+        <input
+          type="checkbox"
+          [checked]="item.completed"
+          (change)="toggle(item)"
+        />
+        <span class="item-title">{{ item.title }}</span>
+      </label>
+    </li>
+    <!-- Demo extra items -->
+    <li class="checklist-item"><label><input type="checkbox" disabled /> <span class="item-title">Book Venue</span></label></li>
+    <li class="checklist-item"><label><input type="checkbox" disabled /> <span class="item-title">Send Invitations</span></label></li>
+    <li class="checklist-item"><label><input type="checkbox" disabled /> <span class="item-title">Hire Photographer</span></label></li>
+    <li class="checklist-item"><label><input type="checkbox" disabled /> <span class="item-title">Order Cake</span></label></li>
+    <li class="checklist-item"><label><input type="checkbox" disabled /> <span class="item-title">Arrange Transportation</span></label></li>
+  </ul>
+</div>

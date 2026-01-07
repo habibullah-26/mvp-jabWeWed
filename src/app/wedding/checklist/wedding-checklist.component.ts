@@ -7,24 +7,8 @@ import { ChecklistItem } from '../../core/models/checklist.model';
   standalone: true,
   selector: 'app-wedding-checklist',
   imports: [CommonModule],
-  template: `
-    <h2>Wedding Checklist</h2>
-
-    <p>Progress: {{ progress }}%</p>
-
-    <ul>
-      <li *ngFor="let item of checklist">
-        <label>
-          <input
-            type="checkbox"
-            [checked]="item.completed"
-            (change)="toggle(item)"
-          />
-          {{ item.title }}
-        </label>
-      </li>
-    </ul>
-  `
+  templateUrl: './wedding-checklist.component.html',
+  styleUrls: ['./wedding-checklist.component.css']
 })
 export class WeddingChecklistComponent implements OnInit {
 

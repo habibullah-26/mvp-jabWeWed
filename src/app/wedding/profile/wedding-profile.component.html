@@ -1,0 +1,41 @@
+
+<div class="profile-form-wrapper">
+  <h2>Wedding Profile</h2>
+  <form [formGroup]="profileForm" class="profile-form grid-form">
+  <div class="form-row">
+    <label>First Name</label>
+    <input formControlName="firstName" placeholder="First Name" />
+  </div>
+  <div class="form-row">
+    <label>Last Name</label>
+    <input formControlName="lastName" placeholder="Last Name" />
+  </div>
+  <div class="form-row">
+    <label>Co-Registrant</label>
+    <input formControlName="coRegistrant" placeholder="Co-Registrant Name" />
+  </div>
+  <div class="form-row">
+    <label>Wedding Date</label>
+    <input type="date" formControlName="weddingDate" />
+  </div>
+  <div class="form-row">
+    <label>Venue</label>
+    <input formControlName="venue" placeholder="Venue" />
+  </div>
+  <div class="form-row">
+    <label>City</label>
+    <input formControlName="city" placeholder="City" />
+  </div>
+  <div class="form-row">
+    <label>Budget</label>
+    <input formControlName="budgetRange" placeholder="Budget Range" />
+  </div>
+  <div class="form-row">
+    <label>Website</label>
+    <input formControlName="website" placeholder="Wedding Website Link" />
+  </div>
+  <div class="form-actions">
+    <button type="button" [disabled]="profileForm.invalid" (click)="saveProfile()">Save Profile</button>
+  </div>
+</form>
+</div>

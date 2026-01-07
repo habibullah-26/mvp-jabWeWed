@@ -1,7 +1,29 @@
-<h2>Admin - Vendors</h2>
+<h2>Vendors</h2>
 
-<ul>
-  <li *ngFor="let vendor of vendors">
-    {{ vendor.name }} - {{ vendor.category }} ({{ vendor.city }})
-  </li>
-</ul>
+<div class="admin-vendors-table-card">
+  <table class="admin-vendors-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Category</th>
+        <th>City</th>
+        <th>Price Range</th>
+        <th>Rating</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vendor of vendors">
+        <td>{{ vendor.name }}</td>
+        <td>{{ vendor.category }}</td>
+        <td>{{ vendor.city }}</td>
+        <td>{{ vendor.priceRange }}</td>
+        <td>{{ vendor.rating }} <span *ngIf="vendor.totalReviews">({{ vendor.totalReviews }})</span></td>
+        <td>
+          <button class="approve-btn" (click)="approveVendor(vendor)">Approve</button>
+          <button class="reject-btn" (click)="rejectVendor(vendor)">Reject</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

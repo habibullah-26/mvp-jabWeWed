@@ -1,14 +1,35 @@
 <aside class="sidebar">
-  <nav>
-    <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-    <a routerLink="/profile" routerLinkActive="active">Wedding Profile</a>
-    <a routerLink="/checklist" routerLinkActive="active">Checklist</a>
-    <a routerLink="/budget" routerLinkActive="active">Budget</a>
-    <a routerLink="/vendors" routerLinkActive="active">Vendors</a>
+  <nav class="sidebar-nav">
+    <ul class="sidebar-menu">
+      <li *ngIf="role === _userRoles?.USER" class="sidebar-section">
+        <!-- <span class="sidebar-section-title">User Menu</span> -->
+        <ul>
+          <li><a routerLink="/app/dashboard" routerLinkActive="active">Dashboard</a></li>
+          <li><a routerLink="/app/profile" routerLinkActive="active">Wedding Profile</a></li>
+          <li><a routerLink="/app/checklist" routerLinkActive="active">Checklist</a></li>
+          <li><a routerLink="/app/budget" routerLinkActive="active">Budget</a></li>
+          <li><a routerLink="/app/vendors" routerLinkActive="active">Vendors</a></li>
+        </ul>
+      </li>
+      <li class="sidebar-divider"></li>
+      <li *ngIf="role === _userRoles?.ADMIN" class="sidebar-section">
+        <!-- <span class="sidebar-section-title">Admin Menu</span> -->
+        <ul>
+          <li><a routerLink="/admin/dashboard" routerLinkActive="active">Dashboard</a></li>
+          <li><a routerLink="/admin/vendors" routerLinkActive="active">Vendors</a></li>
+          <li><a routerLink="/admin/couples" routerLinkActive="active">Couples</a></li>
+        </ul>
+      </li>
 
-    <hr />
-
-    <a routerLink="/admin/vendors">Admin Vendors</a>
-    <a routerLink="/admin/inquiries">Admin Inquiries</a>
+      <li *ngIf="role === _userRoles?.VENDOR" class="sidebar-section">
+        <!-- <span class="sidebar-section-title">Admin Menu</span> -->
+        <ul>
+          <li><a routerLink="/vendor/profile" routerLinkActive="active">Profile</a></li>
+          <li><a routerLink="/vendor/requests" routerLinkActive="active">Requests</a></li>
+          <li><a routerLink="/vendor/packages" routerLinkActive="active">Packages</a></li>
+          <li><a routerLink="/vendor/awards" routerLinkActive="active">Awards</a></li>
+        </ul>
+      </li>
+    </ul>
   </nav>
 </aside>

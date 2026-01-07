@@ -11,9 +11,10 @@ import { RouterModule } from '@angular/router';
 })
 export class HeaderComponent {
 
+  userRole: String = '';
   showDropdown: boolean = false;
   constructor() {
-
+    this.userRole = localStorage.getItem('role') || 'user';
    }
 
   logout(): void {
@@ -32,4 +33,15 @@ export class HeaderComponent {
     // Navigate to settings page
     window.location.href = '/settings';
   }
+
+  getUserRoleLabel(): string {
+  switch (this.userRole) {
+    case 'admin':
+      return 'Admin';
+    case 'vendor':
+      return 'Vendor';
+    default:
+      return 'Couple';
+  }
+}
 }

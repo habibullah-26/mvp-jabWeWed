@@ -1,3 +1,120 @@
+/* Professional styling for testimonials, gallery, and FAQ sections */
+
+.section-padded {
+  padding: 64px 0 48px 0;
+}
+
+.testimonials {
+  background: #f8f7fa;
+  text-align: center;
+}
+.testimonials h2 {
+  font-size: 2.2rem;
+  margin-bottom: 32px;
+  color: #a31548;
+}
+.testimonial-grid {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.testimonial-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(163,21,72,0.07);
+  padding: 32px 28px 24px 28px;
+  max-width: 340px;
+  min-width: 260px;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  border: 1px solid #f3e0ef;
+}
+.testimonial-card p {
+  font-style: italic;
+  color: #444;
+  margin-bottom: 12px;
+}
+.testimonial-card span {
+  color: #a31548;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.gallery {
+  background: #fff;
+  text-align: center;
+}
+.gallery h2 {
+  font-size: 2.1rem;
+  margin-bottom: 28px;
+  color: #2563eb;
+}
+.gallery-grid {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.gallery-grid img {
+  border-radius: 12px;
+  width: 210px;
+  height: 140px;
+  object-fit: cover;
+  box-shadow: 0 2px 10px rgba(37,99,235,0.08);
+  border: 1px solid #e0e7ef;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+.gallery-grid img:hover {
+  transform: scale(1.04) translateY(-4px);
+  box-shadow: 0 6px 24px rgba(37,99,235,0.13);
+}
+
+.faq {
+  background: #f8f7fa;
+  text-align: center;
+}
+.faq h2 {
+  font-size: 2.1rem;
+  margin-bottom: 28px;
+  color: #a31548;
+}
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
+.faq-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(163,21,72,0.07);
+  padding: 22px 28px 18px 28px;
+  max-width: 520px;
+  width: 100%;
+  border: 1px solid #f3e0ef;
+  text-align: left;
+}
+.faq-item h4 {
+  color: #2563eb;
+  margin-bottom: 8px;
+  font-size: 1.13rem;
+}
+.faq-item p {
+  color: #444;
+  font-size: 1rem;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .testimonial-grid, .gallery-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .faq-list {
+    padding: 0 8px;
+  }
+}
 /* ========== RESET ========== */
 a {
   text-decoration: none;

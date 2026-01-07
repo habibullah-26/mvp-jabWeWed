@@ -1,3 +1,24 @@
+/* ---------- Sign Up Link ---------- */
+.signup-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  font-size: 14px;
+  color: #6b7280;
+}
+.signup-link a {
+  color: #a31548;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.18s;
+  margin-left: 4px;
+}
+.signup-link a:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
 /* ---------- Base ---------- */
 * {
   box-sizing: border-box;

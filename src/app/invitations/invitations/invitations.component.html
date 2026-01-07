@@ -4,28 +4,25 @@
 </div>
 
 <!-- Filters Section -->
-<div class="filters">
-    <div class="filters-inner">
+<div class="filters right-align full-width">
+    <form class="filters-inner improved-filter-form full-width-form">
         <div class="filter-group">
-            <label for="styleFilter">Style</label>
             <select id="styleFilter">
-                <option value="">All</option>
+                <option value="">Style</option>
                 <option *ngFor="let style of styles" [value]="style">{{ style }}</option>
             </select>
         </div>
         <div class="filter-group">
-            <label for="typeFilter">Type</label>
             <select id="typeFilter">
-                <option value="">All</option>
+                <option value="">Type</option>
                 <option *ngFor="let type of types" [value]="type">{{ type }}</option>
             </select>
         </div>
         <div class="filter-group">
-            <label for="priceFilter">Max Price</label>
-            <input id="priceFilter" type="number" placeholder="Enter max price" />
+            <input id="priceFilter" type="number" placeholder="Max Price" />
         </div>
-        <button class="filter-btn" type="button">Filter</button>
-    </div>
+        <button class="filter-btn primary" type="button">Filter</button>
+    </form>
 </div>
 
 <!-- Invitations List -->

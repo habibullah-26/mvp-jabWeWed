@@ -10,5 +10,11 @@
     "email": "admin@test.com",
     "password": "admin123",
     "role": "admin"
+  },
+  {
+    "id": 3,
+    "email": "vendor@test.com",
+    "password": "vendor123",
+    "role": "vendor"
   }
 ]

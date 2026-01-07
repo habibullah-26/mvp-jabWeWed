@@ -1,27 +1,67 @@
-<h2>Wedding Overview</h2>
 
-<div class="stats">
-  <div class="card">
-    <h3>Wedding Date</h3>
-    <p>24 March 2026</p>
+
+
+<div class="dashboard-container">
+  <h2 class="dashboard-title">Wedding Dashboard</h2>
+  <div class="dashboard-tiles-row">
+    <div class="main-card">
+      <div class="main-card-content no-icon">
+        <h3>Wedding Date</h3>
+        <p>24 March 2026</p>
+      </div>
+    </div>
+    <div class="main-card">
+      <div class="main-card-content no-icon">
+        <h3>Checklist Progress</h3>
+        <div class="progress-bar large">
+          <div class="progress-fill" style="width: 65%"></div>
+        </div>
+        <p>65%</p>
+      </div>
+    </div>
+    <div class="main-card">
+      <div class="main-card-content no-icon">
+        <h3>Total Budget</h3>
+        <p>PKR 2,500,000</p>
+      </div>
+    </div>
   </div>
 
-  <div class="card">
-    <h3>Checklist Progress</h3>
-    <p>65%</p>
+  <div class="dashboard-cards-row">
+    <div class="card schedule-card">
+      <h3><span class="material-icons">schedule</span> Upcoming Tasks</h3>
+      <ul>
+        <li class="done"><span class="material-icons">check</span> Book Photographer</li>
+        <li><span class="material-icons">hourglass_empty</span> Finalize Venue</li>
+        <li><span class="material-icons">hourglass_empty</span> Send Invitations</li>
+      </ul>
+    </div>
+    <div class="card schedule-card">
+      <h3><span class="material-icons">event</span> Next Event</h3>
+      <ul>
+        <li><span class="material-icons">event</span> Wedding Ceremony</li>
+        <li><span class="material-icons">event</span> Reception</li>
+        <li><span class="material-icons">event</span> Mehndi Night</li>
+      </ul>
+    </div>
+    <div class="card schedule-card">
+      <h3><span class="material-icons">assignment</span> Pending Items</h3>
+      <ul>
+        <li><span class="material-icons">close</span> Confirm Caterer</li>
+        <li><span class="material-icons">close</span> Book DJ</li>
+        <li><span class="material-icons">close</span> Finalize Guest List</li>
+      </ul>
+    </div>
   </div>
 
-  <div class="card">
-    <h3>Total Budget</h3>
-    <p>PKR 2,500,000</p>
+  <div class="dashboard-chart-row">
+    <div class="card chart-card">
+      <h3><span class="material-icons"></span> Budget Overview</h3>
+      <canvas id="budgetBarChart" width="320" height="320"></canvas>
+    </div>
+    <div class="card chart-card">
+      <h3><span class="material-icons"></span> Category Distribution</h3>
+      <canvas id="categoryPieChart" width="320" height="320"></canvas>
+    </div>
   </div>
-</div>
-
-<div class="card wide">
-  <h3>Upcoming Tasks</h3>
-  <ul>
-    <li>✔ Book Photographer</li>
-    <li>⬜ Finalize Venue</li>
-    <li>⬜ Send Invitations</li>
-  </ul>
 </div>

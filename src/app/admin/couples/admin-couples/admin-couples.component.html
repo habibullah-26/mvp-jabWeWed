@@ -1,0 +1,31 @@
+<h2>Couples</h2>
+
+<div class="admin-couples-table-card">
+	<table class="admin-couples-table">
+		<thead>
+			<tr>
+				<th>Registrant</th>
+				<th>Co-Registrant</th>
+				<th>Wedding Date</th>
+				<th>Wedding Location</th>
+				<th>Wedding Website</th>
+				<th>Registry</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let r of registries">
+				<td>{{r.firstName}} {{r.lastName}}</td>
+				<td>{{r.coRegistrant}}</td>
+				<td>{{r.weddingDate}}</td>
+				<td>{{r.weddingLocation}}</td>
+				<td><a [href]="r.weddingWebsite" target="_blank">Visit</a></td>
+				<td><a [href]="r.registryLink" target="_blank">View Registry</a></td>
+				<td>
+					<button class="approve-btn" (click)="approveRegistry(r)">Approve</button>
+					<button class="reject-btn" (click)="rejectRegistry(r)">Reject</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

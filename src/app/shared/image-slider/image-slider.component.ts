@@ -15,4 +15,8 @@ export class ImageSliderComponent {
   goToSlide(i: number): void {
     this.index = i;
   }
+
+  trackByFn(index: number, item: string) {
+    return item;
+  }
 }

@@ -1,0 +1,134 @@
+/* Primary button style for Save Profile */
+.button-primary {
+	background: #c2185b;
+	color: #fff;
+	border: none;
+	padding: 10px 28px;
+	border-radius: 8px;
+	font-weight: 600;
+	font-size: 15px;
+	transition: background 0.2s;
+	cursor: pointer;
+	box-shadow: 0 2px 8px rgba(163,21,72,0.08);
+}
+.button-primary:hover {
+	background: #a31548;
+}
+.button-primary:disabled {
+	background: #e5e7eb;
+	color: #b6b6b6;
+	cursor: not-allowed;
+}
+/* Simple styling for the wedding profile form */
+/* Professional two-column grid form layout */
+/* Wrapper to ensure 100% width and better centering */
+.profile-form-wrapper {
+	width: 90%;
+	/* max-width: 1000px; */
+	margin: 0 10px;
+	padding: 0 12px;
+}
+.profile-form {
+	width: 100%;
+	margin: 40px 0;
+	background: #fff;
+	border-radius: 14px;
+	box-shadow: 0 4px 24px rgba(37,99,235,0.08);
+	padding: 38px 36px 28px 36px;
+}
+.grid-form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 24px 32px;
+	align-items: end;
+}
+.form-row {
+	display: flex;
+	flex-direction: column;
+	gap: 7px;
+}
+.profile-form label {
+	font-weight: 600;
+	color: #2563eb;
+	margin-bottom: 2px;
+	font-size: 15px;
+}
+.profile-form input {
+	padding: 11px 13px;
+	border-radius: 8px;
+	border: 1px solid #d1d5db;
+	font-size: 15px;
+	background: #f8fafc;
+	transition: border 0.18s;
+}
+.profile-form input:focus {
+	border-color: #a31548;
+	outline: none;
+}
+.form-actions {
+	grid-column: 1 / -1;
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 10px;
+}
+/* Use the same button style as registry filter */
+.profile-form button {
+	background: #c2185b;
+	color: #fff;
+	border: none;
+	padding: 10px 28px !important;
+	border-radius: 8px;
+	font-weight: 600;
+	font-size: 15px;
+	transition: background 0.2s;
+	cursor: pointer;
+}
+.profile-form button:hover {
+	background: #a31548;
+}
+.profile-form button:disabled {
+	background: #e5e7eb;
+	color: #b6b6b6;
+	cursor: not-allowed;
+}
+@media (max-width: 700px) {
+	.grid-form {
+		grid-template-columns: 1fr;
+		gap: 18px;
+	}
+	.profile-form {
+		padding: 22px 4px;
+	}
+}
+.form-row {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+.profile-form label {
+	font-weight: 500;
+	color: #a31548;
+}
+.profile-form input {
+	padding: 10px 12px;
+	border-radius: 7px;
+	border: 1px solid #ddd;
+	font-size: 15px;
+}
+.profile-form button {
+	margin-top: 12px;
+	background: #2563eb;
+	color: #fff;
+	border: none;
+	border-radius: 7px;
+	padding: 12px 0;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background 0.18s;
+}
+.profile-form button:disabled {
+	background: #b6c6e3;
+	cursor: not-allowed;
+}
+/* Add your styles for WeddingProfileComponent here */

@@ -1,3 +1,67 @@
+.full-width {
+	width: 100%;
+}
+.full-width-form {
+	width: 100%;
+	justify-content: flex-end;
+}
+.improved-filter-form {
+	display: flex;
+	gap: 16px;
+	background: #fff;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(190, 24, 93, 0.10);
+	padding: 16px 24px;
+	align-items: center;
+	width: 100%;
+	justify-content: flex-end;
+}
+.filter-group select,
+.filter-group input {
+	min-width: 140px;
+	padding: 8px 12px;
+	border-radius: 6px;
+	border: 1px solid #e5e7eb;
+	font-size: 1rem;
+	background: #f8fafc;
+	color: #374151;
+}
+.filter-group input {
+	max-width: 120px;
+}
+.right-align {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-start;
+	margin-bottom: 24px;
+}
+.improved-filter-form {
+	display: flex;
+	gap: 16px;
+	background: #fff;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(190, 24, 93, 0.10);
+	padding: 16px 24px;
+	align-items: center;
+}
+.filter-group {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+.filter-btn.primary {
+	background: #be185d;
+	color: #fff;
+	border: none;
+	border-radius: 6px;
+	padding: 8px 18px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+.filter-btn.primary:hover {
+	background: #a21caf;
+}
 
 /* Filters Section - match vendor filter style */
 .filters {
@@ -41,6 +105,7 @@
 /* Invitations List */
 .invitation-list {
 	display: flex;
+	justify-content: center;
 	flex-wrap: wrap;
 	gap: 2rem;
 	padding-bottom: 4rem;
@@ -64,7 +129,7 @@
 .invitation-card {
 	border: 1px solid #ddd;
 	border-radius: 8px;
-	width: 250px;
+	width: 320px;
 	box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 	overflow: hidden;
 	background: #fff;

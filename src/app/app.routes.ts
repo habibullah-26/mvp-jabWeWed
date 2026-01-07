@@ -10,6 +10,12 @@ import { VendorListComponent } from './vendors/vendor-list/vendor-list.component
 import { BudgetComponent } from './wedding/budget/budget.component';
 import { WeddingChecklistComponent } from './wedding/checklist/wedding-checklist.component';
 import { WeddingProfileComponent } from './wedding/profile/wedding-profile.component';
+import { AdminCouplesComponent } from './admin/couples/admin-couples/admin-couples.component';
+import { AdminDashboardComponent } from './admin/dashboard/admin-dashboard/admin-dashboard.component';
+import { VendorProfileComponent } from './vendor/vendor-profile/vendor-profile.component';
+import { VendorBookingsComponent } from './vendor/vendor-bookings/vendor-bookings.component';
+import { VendorPackagesComponent } from './vendor/vendor-packages/vendor-packages.component';
+import { VendorAwardsComponent } from './vendor/vendor-awards/vendor-awards.component';
 
 export const routes: Routes = [
 
@@ -51,6 +57,56 @@ export const routes: Routes = [
       { path: 'profile', component: WeddingProfileComponent },
       { path: 'checklist', component: WeddingChecklistComponent },
       { path: 'budget', component: BudgetComponent },
+
+      /* Vendors */
+      { path: 'vendors', component: VendorListComponent },
+      { path: 'vendors/:id', component: VendorDetailComponent },
+      { path: 'vendors/:id/inquiry', component: VendorInquiryComponent },
+
+      /* Default inside /app */
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
+    ]
+  },
+  /* ================= APP (AFTER LOGIN) ================= */
+  {
+    path: 'admin',
+    component: AppLayoutComponent,
+    children: [
+
+      /* Dashboard */
+      { path: 'dashboard', component: AdminDashboardComponent },
+
+      /* Wedding Planning */
+      { path: 'profile', component: WeddingProfileComponent },
+      { path: 'checklist', component: WeddingChecklistComponent },
+      { path: 'budget', component: BudgetComponent },
+
+      /* Vendors */
+      { path: 'vendors', component: AdminVendorsComponent },
+      { path: 'vendors/:id', component: VendorDetailComponent },
+      { path: 'vendors/:id/inquiry', component: VendorInquiryComponent },
+
+      { path: 'couples', component: AdminCouplesComponent },
+
+      /* Default inside /app */
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
+    ]
+  },
+
+  /* ================= APP (AFTER LOGIN) ================= */
+  {
+    path: 'vendor',
+    component: AppLayoutComponent,
+    children: [
+
+      /* Dashboard */
+      { path: 'dashboard', component: DashboardComponent },
+
+      /* Wedding Planning */
+      { path: 'profile', component: VendorProfileComponent },
+      { path: 'requests', component: VendorBookingsComponent },
+      { path: 'packages', component: VendorPackagesComponent },
+       { path: 'awards', component: VendorAwardsComponent },
 
       /* Vendors */
       { path: 'vendors', component: VendorListComponent },

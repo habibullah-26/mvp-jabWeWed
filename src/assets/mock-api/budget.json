@@ -1,5 +1,12 @@
 [
   { "id": 1, "category": "Venue", "estimated": 600000, "actual": 550000 },
   { "id": 2, "category": "Catering", "estimated": 400000, "actual": 420000 },
-  { "id": 3, "category": "Photography", "estimated": 150000, "actual": 140000 }
+  { "id": 3, "category": "Photography", "estimated": 150000, "actual": 140000 },
+  { "id": 4, "category": "Decor", "estimated": 200000, "actual": 210000 },
+  { "id": 5, "category": "Music & DJ", "estimated": 80000, "actual": 75000 },
+  { "id": 6, "category": "Invitations", "estimated": 30000, "actual": 32000 },
+  { "id": 7, "category": "Transportation", "estimated": 50000, "actual": 48000 },
+  { "id": 8, "category": "Dress & Attire", "estimated": 120000, "actual": 125000 },
+  { "id": 9, "category": "Gifts & Favors", "estimated": 40000, "actual": 39000 },
+  { "id": 10, "category": "Makeup & Hair", "estimated": 35000, "actual": 34000 }
 ]

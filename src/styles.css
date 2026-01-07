@@ -3,3 +3,14 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.button-primary {
+  background-color: #c2185b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}

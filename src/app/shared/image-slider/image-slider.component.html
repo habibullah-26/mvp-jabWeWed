@@ -1,11 +1,13 @@
 <div class="slider">
     <div class="image-container">
-        <img *ngIf="images && images.length > 0 && images[index]" 
-             [src]="images[index]" 
-             [alt]="'Slide ' + (index + 1)">
+           <img *ngIf="images && images.length > 0 && images[index]"
+               [src]="images[index]"
+               [alt]="'Slide ' + (index + 1)"
+               loading="lazy"
+               class="slider-img-fade">
         <div class="dots">
             <span 
-                *ngFor="let img of images || []; let i = index" 
+                *ngFor="let img of images || []; let i = index; trackBy: trackByFn" 
                 class="dot" 
                 [class.active]="i === index"
                 (click)="goToSlide(i)">

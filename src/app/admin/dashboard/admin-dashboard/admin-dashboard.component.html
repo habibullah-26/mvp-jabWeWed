@@ -1,0 +1,27 @@
+<h2>Admin Dashboard</h2>
+
+<div class="admin-stats-row">
+	<div class="admin-stat-card">
+		<h3>Total Vendors</h3>
+		<div class="admin-stat-value">{{ totalVendors }}</div>
+	</div>
+	<div class="admin-stat-card">
+		<h3>Total Couples</h3>
+		<div class="admin-stat-value">{{ totalCouples }}</div>
+	</div>
+	<div class="admin-stat-card">
+		<h3>Pending Approvals</h3>
+		<div class="admin-stat-value">{{ pendingApprovals }}</div>
+	</div>
+</div>
+
+<div class="admin-charts-row">
+	<div class="admin-chart-card">
+		<h3>Vendors by Category</h3>
+		<canvas id="vendorsCategoryChart" width="320" height="320"></canvas>
+	</div>
+	<div class="admin-chart-card">
+		<h3>Registries by Month</h3>
+		<canvas id="registriesMonthChart" width="320" height="320"></canvas>
+	</div>
+</div>

@@ -1,6 +1,6 @@
 .detail-wrapper{max-width:1200px;margin:auto;padding:20px}
 .hero-gallery{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
-.hero-gallery img{height:160px;object-fit:cover;border-radius:12px;width:100%}
+.hero-gallery img{height:250px;object-fit:cover;border-radius:12px;width:100%}
 
 .header h1{margin:15px 0 5px}
 .meta span{margin-right:15px;color:#777}

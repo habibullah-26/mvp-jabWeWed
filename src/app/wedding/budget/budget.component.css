@@ -1,0 +1,53 @@
+/* Professional budget tracker styles */
+.budget-wrapper {
+    width: 90%;
+	margin: 40px auto;
+	background: #fff;
+	border-radius: 14px;
+	box-shadow: 0 4px 24px rgba(37,99,235,0.08);
+	padding: 36px 28px 28px 28px;
+}
+.budget-title {
+	font-size: 2rem;
+	color: #2563eb;
+	margin-bottom: 24px;
+	text-align: center;
+}
+.budget-table {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0;
+	font-size: 16px;
+	background: transparent;
+	margin-bottom: 18px;
+}
+.budget-table th {
+	background: #f3e0ef;
+	color: #a31548;
+	font-weight: 600;
+	padding: 14px 10px;
+	border-bottom: 2px solid #e0cbe2;
+	text-align: left;
+}
+.budget-table td {
+	padding: 12px 10px;
+	border-bottom: 1px solid #f0e0f0;
+	color: #222e3a;
+	vertical-align: middle;
+}
+.budget-table tr.totals-row td {
+	background: #f8f7fa;
+	color: #2563eb;
+	font-size: 17px;
+	font-weight: 700;
+	border-bottom: none;
+}
+.budget-table tbody tr:nth-child(even) {
+	background: #faf6fa;
+}
+.budget-table tbody tr:nth-child(odd) {
+	background: #fff;
+}
+.budget-table tbody tr:hover {
+	background: #e0e7ff;
+}

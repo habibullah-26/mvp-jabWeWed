@@ -2,34 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ApiService } from '../../core/services/api.service';
 import { BudgetItem } from '../../core/models/budget.model';
+import { CommonapiService } from '../../core/services/commonapi.service';
 
 @Component({
   standalone: true,
   selector: 'app-budget',
   imports: [CommonModule],
-  template: `
-    <h2>Budget Tracker</h2>
-
-    <table border="1" cellpadding="6">
-      <thead>
-        <tr>
-          <th>Category</th>
-          <th>Estimated</th>
-          <th>Actual</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let item of items">
-          <td>{{ item.category }}</td>
-          <td>{{ item.estimated }}</td>
-          <td>{{ item.actual }}</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p><strong>Total Estimated:</strong> {{ totalEstimated }}</p>
-    <p><strong>Total Actual:</strong> {{ totalActual }}</p>
-  `
+  templateUrl: './budget.component.html',
+  styleUrls: ['./budget.component.css']
 })
 export class BudgetComponent implements OnInit {
 
@@ -37,13 +17,15 @@ export class BudgetComponent implements OnInit {
   totalEstimated = 0;
   totalActual = 0;
 
-  constructor(private api: ApiService) {}
+  constructor(private api: ApiService, private commonApi: CommonapiService) {}
 
   ngOnInit(): void {
-    this.api.get<BudgetItem[]>('budget.json').subscribe(data => {
-      this.items = data;
-      this.calculateTotals();
-    });
+   this.commonApi.getAllBudgets()
+      .subscribe(data => {
+        console.log('Budget data loaded:', data);
+        this.items = data;
+        this.calculateTotals();
+      });
   }
 
   private calculateTotals(): void {

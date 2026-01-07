@@ -45,10 +45,25 @@ export class LoginComponent implements OnInit {
     setTimeout(() => {
       const { email, password } = this.loginForm.value;
 
-      if ((email === 'user@test.com' && password === '123456') ||
-          (email === 'admin@test.com' && password === 'admin123')) {
+      let role = '';
+      if (email === 'user@test.com' && password === '123456') {
+        role = 'user';
+      } else if (email === 'vendor@test.com' && password === 'vendor123') {
+        role = 'vendor';
+      } else if (email === 'admin@test.com' && password === 'admin123') {
+        role = 'admin';
+      }
+
+      if (role) {
         localStorage.setItem('loggedIn', 'true');
-        this.router.navigate(['/app/dashboard']);
+        localStorage.setItem('role', role);
+        if (role === 'user') {
+          this.router.navigate(['/app/dashboard']);
+        } else if (role === 'vendor') {
+          this.router.navigate(['/vendor/profile']);
+        } else if (role === 'admin') {
+          this.router.navigate(['/admin/dashboard']);
+        }
       } else {
         this.errorMessage = 'Invalid email or password';
       }
