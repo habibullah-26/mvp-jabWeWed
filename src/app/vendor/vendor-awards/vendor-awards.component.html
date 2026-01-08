@@ -1,1 +1,50 @@
-<p>vendor-awards works!</p>
+<div class="awards-header" style="margin-bottom: 1rem;">
+  <button (click)="addReward()" class="btn-primary">Add Reward</button>
+</div>
+
+<table class="awards-table">
+  <thead>
+    <tr>
+      <th style="width: 40px;">#</th>
+      <th>Reward Name</th>
+      <th>Year</th>
+      <th style="width: 120px;">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let reward of rewards; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ reward.name }}</td>
+      <td>{{ reward.year }}</td>
+      <td>
+        <button (click)="editReward(reward)" title="Edit" class="icon-btn">
+          ✏️
+        </button>
+        <button (click)="deleteReward(reward)" title="Delete" class="icon-btn">
+          🗑️
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngIf="showDialog" class="dialog-backdrop">
+  <div class="dialog-modal">
+    <button class="dialog-close" (click)="closeDialog()" aria-label="Close">&times;</button>
+    <h3 class="dialog-title">{{ isEdit ? 'Edit Reward' : 'Add Reward' }}</h3>
+    <form [formGroup]="rewardForm" class="dialog-form">
+      <div class="form-group">
+        <label for="rewardName">Name</label>
+        <input id="rewardName" formControlName="name" />
+      </div>
+      <div class="form-group">
+        <label for="rewardYear">Year</label>
+        <input id="rewardYear" type="number" formControlName="year" />
+      </div>
+      <div class="dialog-actions">
+        <button type="button" (click)="saveReward()" [disabled]="rewardForm.invalid" class="btn-primary">Save</button>
+        <button type="button" (click)="closeDialog()" class="btn-secondary">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>

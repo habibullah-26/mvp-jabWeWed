@@ -1,1 +1,56 @@
-<p>vendor-packages works!</p>
+<div class="packages-header" style="margin-bottom: 1rem;">
+  <button (click)="addPackage()" class="btn-primary">Add Package</button>
+</div>
+
+<table class="packages-table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Package Name</th>
+      <th>Price</th>
+      <th>Details</th>
+      <th style="width: 110px;">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pkg of packages; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ pkg.name }}</td>
+      <td>{{ pkg.price | currency:'PKR':'symbol':'1.0-0' }}</td>
+      <td>{{ pkg.details }}</td>
+      <td>
+        <button (click)="editPackage(pkg)" class="icon-btn" title="Edit">
+          ✏️
+        </button>
+        <button (click)="deletePackage(pkg)" class="icon-btn" title="Delete">
+          🗑️
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngIf="showDialog" class="dialog-backdrop">
+  <div class="dialog-modal">
+    <button class="dialog-close" (click)="closeDialog()" aria-label="Close">&times;</button>
+    <h3 class="dialog-title">{{ isEdit ? 'Edit Package' : 'Add Package' }}</h3>
+    <form [formGroup]="packageForm" class="dialog-form">
+      <div class="form-group">
+        <label for="pkgName">Name</label>
+        <input id="pkgName" formControlName="name" />
+      </div>
+      <div class="form-group">
+        <label for="pkgPrice">Price</label>
+        <input id="pkgPrice" type="number" formControlName="price" />
+      </div>
+      <div class="form-group">
+        <label for="pkgDetails">Details</label>
+        <textarea id="pkgDetails" formControlName="details"></textarea>
+      </div>
+      <div class="dialog-actions">
+        <button type="button" (click)="savePackage()" [disabled]="packageForm.invalid" class="btn-primary">Save</button>
+        <button type="button" (click)="closeDialog()" class="btn-secondary">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>

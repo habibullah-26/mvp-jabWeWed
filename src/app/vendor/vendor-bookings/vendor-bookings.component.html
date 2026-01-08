@@ -1,1 +1,64 @@
-<p>vendor-bookings works!</p>
+<div class="filter-bar-pro">
+  <div class="filter-group">
+    <label class="filter-label-pro" for="statusFilter">Status</label>
+    <select id="statusFilter" [formControl]="statusFilter" class="filter-select-pro">
+      <option value="" disabled selected hidden>Select status</option>
+      <option *ngFor="let status of statuses" [value]="status">{{ status }}</option>
+    </select>
+  </div>
+  <div class="filter-group">
+    <label class="filter-label-pro" for="dateSortFilter">Date</label>
+    <select id="dateSortFilter" [formControl]="dateSortFilter" class="filter-select-pro">
+      <option value="" disabled selected hidden>Sort by date</option>
+      <option *ngFor="let opt of dateSortOptions" [value]="opt">{{ opt }}</option>
+    </select>
+  </div>
+  <button class="btn-filter" type="button">
+    Filter
+  </button>
+</div>
+
+<table class="bookings-table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Couple</th>
+      <th>Date</th>
+      <th>Venue</th>
+      <th>Address</th>
+      <th>Status</th>
+      <th style="width: 210px;">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let booking of filteredBookings; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ booking.couple }}</td>
+      <td>{{ booking.date }}</td>
+      <td>{{ booking.venue }}</td>
+      <td>{{ booking.address }}</td>
+      <td>
+        <span [ngClass]="{
+          'status-booked': booking.status === 'Booked',
+          'status-pending': booking.status === 'Pending',
+          'status-rejected': booking.status === 'Rejected'
+        }">{{ booking.status }}</span>
+      </td>
+      <td>
+        <div class="action-group">
+          <button class="btn-action view" (click)="viewDetail(booking)" title="View Detail">
+            <span class="icon">&#128065;</span> View
+          </button>
+          <ng-container *ngIf="booking.status === 'Pending'">
+            <button class="btn-action accept" (click)="acceptBooking(booking)" title="Accept">
+              <span class="icon">&#10003;</span> Accept
+            </button>
+            <button class="btn-action reject" (click)="rejectBooking(booking)" title="Reject">
+              <span class="icon">&#10005;</span> Reject
+            </button>
+          </ng-container>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
